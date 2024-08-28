@@ -79,5 +79,3 @@ if [ $? -ne 0 ]; then
 else
   echo -e "MySQL service is already started.... $Y SKIPPING $N" | tee -a $LOG_FILE
 fi
-
-
