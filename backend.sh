@@ -31,7 +31,6 @@ VALIDATE(){
 }
 
 echo "script started executing at: $(date)" | tee -a $LOG_FILE
-
 CHECK_ROOT
 
 dnf module disable nodejs -y &>>$LOG_FILE
