@@ -58,7 +58,6 @@ else
   echo -e "MySQL is already installed.... $Y SKIPPING $N" | tee -a $LOG_FILE
 fi
 
-
 echo "Checking if MySQL server is enabled or not..." | tee -a $LOG_FILE
 systemctl is-enabled mysqld &>>$LOG_FILE
 if [ $? -ne 0 ]; then
