@@ -50,4 +50,4 @@ then
     VALIDATE $? "Creating expense user"
 else 
     echo -e "User expense already exists $Y skipping $N"
-fi
+fi 
