@@ -56,5 +56,5 @@ VALIDATE $? "Unzipping frontend"
 cp /home/ec2-user/expense-shell/expense.conf /etc/nginx/default.d/expense.conf
 VALIDATE $? "copies expense conf"
 
-systemctl restart nginx &>>$LOG_FILE
+systemctl restart nginx  &>>$LOG_FILE
 VALIDATE $? "Restarting Nginx"
