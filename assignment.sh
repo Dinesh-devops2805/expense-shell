@@ -62,20 +62,20 @@ fi
 echo "Checking if MySQL server is enabled or not..." | tee -a $LOG_FILE
 systemctl is-enabled mysqld &>>$LOG_FILE
 if [ $? -ne 0 ]; then
-  echo "MySQL service is not enabled. Enabling now..." | tee -a $LOG_FILE
+  echo "MySQL server is not enabled. Enabling now..." | tee -a $LOG_FILE
   systemctl enable mysqld &>>$LOG_FILE
   VALIDATE $? "Enable MySQL Server"
 else
-  echo -e "MySQL service is already enabled.... $Y SKIPPING $N" | tee -a $LOG_FILE
+  echo -e "MySQL server is already enabled.... $Y SKIPPING $N" | tee -a $LOG_FILE
 fi
 
 
 echo "Checking if MySQL server is started or not..." | tee -a $LOG_FILE
 systemctl is-active mysqld &>>$LOG_FILE
 if [ $? -ne 0 ]; then
-  echo "MySQL service is not yet started. Starting now..." | tee -a $LOG_FILE
+  echo "MySQL server is not yet started. Starting now..." | tee -a $LOG_FILE
   systemctl start mysqld &>>$LOG_FILE
   VALIDATE $? "Start MySQL Server"
 else
-  echo -e "MySQL service is already started.... $Y SKIPPING $N" | tee -a $LOG_FILE
+  echo -e "MySQL server is already started.... $Y SKIPPING $N" | tee -a $LOG_FILE
 fi
